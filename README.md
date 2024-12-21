@@ -25,8 +25,7 @@ Verify by checking the container ip and hostname (ID):
 ```
 $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' pfd
 172.17.0.2
-$ docker inspect -f '{{ .Config.Hostname }}' my-container
-699a0911921d
+$ docker inspect -f '{{ .Config.Hostname }}' pfd  699a0911921d
 ```
 
 
