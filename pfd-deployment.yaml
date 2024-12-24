@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: pfd-demo
-        image: svhari/pfd-demo:v2  # Updated image tag
+        image: svhari/pfd-demo:v3  # Updated image tag
         ports:
         - containerPort: 8080
 ---
