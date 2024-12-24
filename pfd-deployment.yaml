@@ -5,7 +5,12 @@ kind: Deployment
 metadata:
   name: pfd-demo
 spec:
-  replicas: 2
+  replicas: 2  # Number of replicas
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   selector:
     matchLabels:
       app: pfd-demo
@@ -16,7 +21,7 @@ spec:
     spec:
       containers:
       - name: pfd-demo
-        image: svhari/pfd-demo:v1
+        image: svhari/pfd-demo:v2  # Updated image tag
         ports:
         - containerPort: 8080
 ---

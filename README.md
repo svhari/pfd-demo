@@ -6,13 +6,14 @@ Build the Docker image manually by cloning the Git repo.
 ```
 $ git clone https://github.com/svhari/python-flask-docker.git
 
-$ docker build -t python-flask-docker .
+
+$ docker build -t pfd-demo-wt .
 ```
 
 ### Run the container
 Create a container from the image.
 ```
-$ docker run --name pfd -d -p 8080:8080 python-flask-docker
+$ docker run --name pfd -d -p 8080:8080 pfd-demo-wt
 ```
 
 Now visit http://localhost:8080

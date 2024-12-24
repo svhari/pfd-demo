@@ -1,9 +1,13 @@
 from flask import Flask, render_template
 import socket
 from datetime import datetime
+import pytz
 
 app = Flask(__name__)
-deploy_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# Define the timezone you want to use
+local_tz = pytz.timezone('Asia/Kolkata')
+deploy_time = datetime.now(local_tz).strftime("%Y-%m-%d %H:%M:%S")
 
 @app.route("/")
 def index():
