@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Define the timezone you want to use
 local_tz = pytz.timezone('Asia/Kolkata')
-deploy_time = datetime.now(local_tz).strftime("%Y-%m-%d %H:%M:%S")
+deploy_time = datetime.now(pytz.utc).astimezone(local_tz).strftime("%Y-%m-%d %H:%M:%S")
 
 @app.route("/")
 def index():
