@@ -1,5 +1,5 @@
-# python-flask-docker
-Basic Python Flask app in Docker which prints the hostname and IP of the container
+# python-flask-docker rel_1.1
+Basic Python Flask app in Docker which prints  the deployment time in addition to the hostname and IP of the container
 
 ### Build application
 Build the Docker image manually by cloning the Git repo.
